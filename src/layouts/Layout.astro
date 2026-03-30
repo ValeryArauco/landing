@@ -5,32 +5,115 @@ import Header from '../components/Header.astro';
 
 <!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Residencia Universitaria Femenina Los Molles</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
 
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-	<body>
-		<Header />
-		<slot />
-		<Footer />
-	</body>
+    <!-- SEO Primary -->
+    <title>Residencia Universitaria Femenina Los Molles | Cochabamba</title>
+    <meta name="description" content="Residencia universitaria femenina en Cochabamba. Ambiente familiar y seguro, WiFi, cocina equipada, lavandería y formación integral en valores humano-cristianos. Plaza Tarija No. 1275, Av. América esq. Av. G. Galindo." />
+    <meta name="keywords" content="residencia universitaria femenina Cochabamba, alojamiento estudiantes Cochabamba, residencia Los Molles, hospedaje universitario Bolivia, pensión universitaria Cochabamba" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Residencia Universitaria Los Molles" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Residencia Universitaria Femenina Los Molles | Cochabamba" />
+    <meta property="og:description" content="Tu hogar lejos de casa en Cochabamba. Ambiente familiar, seguro y con formación en valores para estudiantes universitarias." />
+    <meta property="og:image" content="/banner.webp" />
+    <meta property="og:locale" content="es_BO" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Residencia Universitaria Femenina Los Molles" />
+    <meta name="twitter:description" content="Tu hogar lejos de casa en Cochabamba. Ambiente seguro y formación en valores." />
+    <meta name="twitter:image" content="/banner.webp" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Hind+Madurai:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+	<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+	<meta name="apple-mobile-web-app-title" content="LosMolles" />
+	<link rel="manifest" href="/site.webmanifest" />
+	
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LodgingBusiness",
+      "name": "Residencia Universitaria Femenina Los Molles",
+      "description": "Residencia universitaria femenina en Cochabamba con formación integral en valores humano-cristianos.",
+      "telephone": "+591-77935606",
+      "email": "ruflosmolles@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Plaza Tarija No. 1275",
+        "addressLocality": "Cochabamba",
+        "addressRegion": "Cochabamba",
+        "addressCountry": "BO",
+        "description": "Av. América esq. Av. G. Galindo, Zona Tupuraya"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -17.3741067,
+        "longitude": -66.1432676
+      },
+      "openingHours": "Mo-Su 06:00-22:30",
+      "priceRange": "$$",
+      "amenityFeature": [
+        {"@type": "LocationFeatureSpecification", "name": "WiFi", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Cocina equipada", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Lavandería", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Sala de estudio", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Sala de TV", "value": true}
+      ]
+    }
+    </script>
+  </head>
+
+  <body>
+    <Header />
+    <slot />
+    <Footer />
+  </body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		min-height: 100vh;
-		color: white;
-	}
-	
-	
+<style is:global>
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    overflow-x: clip;
+  }
+
+  html, body {
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    color: #FBFAF8;
+    font-family: 'Hind Madurai', sans-serif;
+    overflow-x: clip;
+  }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.75s ease, transform 0.75s ease;
+  }
+
+  .reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
 </style>
